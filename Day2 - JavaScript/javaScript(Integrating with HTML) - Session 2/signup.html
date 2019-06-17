@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Sign-Up</title>
+    </head>
+
+    <body>
+
+        <h1>Please fill the registration form</h1>
+
+        <form name="signup" action="#">
+
+            <p>First Name : </p>
+            <input type="text" name="firstName">
+            <p>Last Name : </p>
+            <input type="text" name="lastName">
+            <p>Username : </p>
+            <input type="text" name="username">
+            <p>Email id : </p>
+            <input type="text" name="emailid">
+            <p>Password : </p>
+            <input type="text" name="password">
+            <p>Confirm Password : </p>
+            <input type="text" name="confirmPassword">
+            <br><br>
+            <input type="submit" name="submit" value="submit" onclick="checkForm()">
+
+        </form>
+
+        <script>
+
+            function checkForm()
+            {
+                var firstName = document.forms["signup"]["firstName"].value;
+                var lastName = document.forms["signup"]["lastName"].value;
+                var username = document.forms["signup"]["username"].value;
+                var emailid = document.forms["signup"]["emailid"].value;
+                var password = document.forms["signup"]["password"].value;
+                var confirmPassword = document.forms["signup"]["confirmPassword"].value;
+                if(firstName=="")
+                {
+                    alert("Please enter your first name");
+                    return false;
+                }
+                if(username=="")
+                {
+                    alert("Please enter your user name");
+                    return false;
+                }
+                re = /[@]/;
+                if(!re.test(emailid)) 
+                {
+                    alert("Please enter a valid email id");
+                    return false;
+                }
+                if(password!=confirmPassword)
+                {
+                    alert("Passwords donot match");
+                    return false;
+                }
+                alert("Username : "+username+"  Account successfully created")
+            }
+
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Mobile Number</title>
+        <!--<script src="basicForm.js"></script>-->
+    </head>
+
+    <body>
+
+        <h1>Mobile Number</h1>
+
+        <form name = "mobilenumber" action = "#" onsubmit = "checkMobileNumber()">
+            Mobile Number:<br>
+            <input type="text" name="mobileNumber"><br>
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit" />
+          </form>
+
+          <script>
+
+            function checkMobileNumber()
+            {
+                var phoneno = document.forms["mobilenumber"]["mobileNumber"].value;
+                var n = phoneno.length;
+                if(n!=10)
+                    {
+                      alert("Invalid mobile number");
+                    }
+                else
+                    {
+                    alert("Valid phone number");
+                    return false;
+                    }
+            } 
+        </script>        
+
+    </body>
+
+</html>

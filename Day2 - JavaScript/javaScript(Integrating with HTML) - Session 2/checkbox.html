@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Checkbox</title>
+    </head>
+
+    <body>
+
+        <form name="checkboxForm" action="#" onsubmit="printChecked()">
+            <p>Select the types of vehicles you own : </p><br>
+            <input type="checkbox" name="option" value="Bike">Bike<br>
+            <input type="checkbox" name="option" value="Car">Car<br>
+            <input type="checkbox" name="option" value="Aeroplane">Aeroplane<br>
+            <input type="checkbox" name="option" value="Yatch">Yatch<br>
+            <input type="submit" name="submit" value="Submit" />
+        </form>
+
+        <script>
+        
+        function printChecked()
+        {
+				var items=document.getElementsByName('option');
+				var selectedItems="";
+				for(var i=0; i<items.length; i++)
+                {
+					if(items[i].type=='checkbox' && items[i].checked==true)
+						selectedItems+=items[i].value+"\n";
+				}
+				alert("You own : "+selectedItems+".");
+		}
+        
+        </script>
+
+    </body>
+
+</html>

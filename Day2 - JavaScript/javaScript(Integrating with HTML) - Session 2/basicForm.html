@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Basic Form</title>
+        <!--<script src="basicForm.js"></script>-->
+    </head>
+
+    <body>
+
+        <h1>Basic Form</h1>
+
+        <form name = "basicForm" action = "#" onsubmit = "required()">
+            First name:<br>
+            <input type="text" name="firstname"><br>
+            Last name:<br>
+            <input type="text" name="lastname">
+            <br>
+            <br>
+            <input type="submit" name="submit" value="Submit" />
+          </form>
+
+          <script>
+
+function required()
+            {
+            var firstName = document.forms["basicForm"]["firstname"].value;
+            var lastName = document.forms["basicForm"]["lastname"].value;
+            if (firstName == "")
+            {
+            alert("Please input a Value for First Name");
+            return false;
+            }
+            if (lastName == "")
+            {
+            alert("Please input a Value for Last Name");
+            return false;
+            }
+            else 
+            {
+            alert('Values has been accepted');
+            return true; 
+            }
+            }          
+        </script>        
+
+    </body>
+
+</html>

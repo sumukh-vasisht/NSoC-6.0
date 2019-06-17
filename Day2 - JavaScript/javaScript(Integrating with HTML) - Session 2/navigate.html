@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <script type = "text/javascript">
+            function Redirect() 
+            {
+                var number = document.forms["checkNumber"]["number"].value;
+                if(number == '123456')
+                {
+                     window.location = "result.html";
+                     return true;
+                }
+                else
+                {
+                    alert("Numbers donot match");
+                    return false;
+                }
+            }
+      </script>
+   </head>
+   
+   <body>
+      <p>Enter the following number : </p><br>
+      <p>123456</p>
+      
+      <form name="checkNumber">
+          <p>Enter the number</p>
+         <input type = "text" name="number"/>
+         <input type = "button" value = "Submit" onclick = "Redirect();" />
+      </form>
+      
+   </body>
+</html>
